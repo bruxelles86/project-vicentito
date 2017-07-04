@@ -1,0 +1,19 @@
+{
+  "name": "project-vicentito",
+  "version": "1.0.0",
+  "description": "A project to scrape baby name websites to find names that are identical in Spanish and French",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruxelles86/project-vicentito.git"
+  },
+  "author": "Will Gant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bruxelles86/project-vicentito/issues"
+  },
+  "homepage": "https://github.com/bruxelles86/project-vicentito#readme"
+}
