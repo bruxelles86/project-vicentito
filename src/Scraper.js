@@ -20,6 +20,7 @@ Scraper.prototype.scrape = function(language, fn) {
       page += chunk;
     });
     resp.on('end', function() {
+      console.log(page)
       fn(page);
     });
   }).on("error", function(err) {
