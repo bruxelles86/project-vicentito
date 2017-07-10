@@ -8,4 +8,12 @@ describe('Scraper', function() {
          done();
       });
    });
+   
+   it('will get Spanish names instead if passed \'spanish\' as an argument', function(done) {
+      var scraper = new Scraper()
+      scraper.scrape('spanish', function(source) {
+         expect(source.includes('Gustavo')).toEqual(true);
+         done();
+      });
+   });
 });

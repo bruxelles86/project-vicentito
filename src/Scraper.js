@@ -9,7 +9,7 @@ Scraper.prototype.scrape = function(language, fn) {
 
   options = {
     'host': 'www.babynames.org.uk',
-    'path': '/french-boy-baby-names.htm',
+    'path': `/${language}-boy-baby-names.htm`,
     'port': 80
   };
   
