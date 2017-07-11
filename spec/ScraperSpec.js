@@ -1,17 +1,17 @@
 const Scraper = require('../src/Scraper.js')
 
 describe('Scraper', function() {
-   it('gets the HTML of www.babynames.org.uk/french-boy-baby-names.htm', function(done) {
+   it('gets the HTML of www.thomas-bayer.com/restnames', function(done) {
       var scraper = new Scraper()
-      scraper.scrape('french', function(source) {
+      scraper.scrape('France', function(source) {
          expect(source.includes('Adrien')).toBe(true); 
          done();
       });
    });
    
-   it('will get Spanish names instead if passed \'spanish\' as an argument', function(done) {
+   it('will get Spanish names instead if passed \'Spain\' as an argument', function(done) {
       var scraper = new Scraper()
-      scraper.scrape('spanish', function(source) {
+      scraper.scrape('Spain', function(source) {
          expect(source.includes('Gustavo')).toBe(true);
          done();
       });

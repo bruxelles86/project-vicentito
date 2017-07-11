@@ -3,13 +3,13 @@ const http = require('http');
 function Scraper() {
 };
 
-Scraper.prototype.scrape = function(language, fn) {
+Scraper.prototype.scrape = function(country, fn) {
   var options, page;
   page = '';
 
   options = {
-    'host': 'www.babynames.org.uk',
-    'path': `/${language}-boy-baby-names.htm`,
+    'host': 'www.thomas-bayer.com',
+    'path': `/restnames/namesincountry.groovy?country=${country}`,
     'port': 80
   };
   

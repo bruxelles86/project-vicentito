@@ -18,5 +18,10 @@
   "homepage": "https://github.com/bruxelles86/project-vicentito#readme",
   "devDependencies": {
     "jasmine": "^2.6.0"
+  },
+  "dependencies": {
+    "install": "^0.10.1",
+    "npm": "^5.2.0",
+    "table-scraper": "^0.1.0"
   }
 }
