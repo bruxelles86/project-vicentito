@@ -20,7 +20,7 @@ Scraper.prototype.scrape = function(country, fn) {
       page += chunk;
     });
     resp.on('end', function() {
-      fn(page);
+       fn(page);
     });
   }).on("error", function(err) {
     console.log(`Got error: ${err.message}`);
