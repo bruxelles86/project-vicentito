@@ -10,9 +10,8 @@ function Interface() {
 }
 
 Interface.prototype.getNames = function(country1, country2) {
-    this.names1 = this.scraper.scrape(country1, function() {
-       console.log(this.names1) 
-    });
+
+    
 };
 
 module.exports = Interface;
