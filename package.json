@@ -23,6 +23,5 @@
   "dependencies": {
     "install": "^0.10.1",
     "npm": "^5.2.0",
-    "table-scraper": "^0.1.0"
   }
 }
