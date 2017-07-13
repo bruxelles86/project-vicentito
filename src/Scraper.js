@@ -3,7 +3,8 @@ const http = require('http');
 function Scraper() {
 };
 
-Scraper.prototype.scrape = function(country, fn) {
+Scraper.prototype.scrape = function(country) {
+  var promise = new Promise(function(resolve, reject) {
   var options, page;
   page = '';
 
@@ -20,11 +21,13 @@ Scraper.prototype.scrape = function(country, fn) {
       page += chunk;
     });
     resp.on('end', function() {
-       fn(page);
+      resolve(page);
     });
   }).on("error", function(err) {
     console.log(`Got error: ${err.message}`);
   });
+  });
+  return promise
 };
 
 module.exports = Scraper;
