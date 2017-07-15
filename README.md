@@ -13,6 +13,11 @@ Installation, Use & Testing
 * If successful, a list of matching names will appear in the console.
 * Tests can be run by running `jasmine` in the main directory
 
+Features
+--------
+
+* The final version allows a user to compare names from any two countries provided for by the thomas-bayer.com API (around two dozen or so). So not just France and Spain.
+
 Technologies & Principles
 -----------------------
 
@@ -33,7 +38,7 @@ Next came the '[Scraper](https://github.com/bruxelles86/project-vicentito/blob/m
 
 To navigate through the data, my '[ListBuilder](https://github.com/bruxelles86/project-vicentito/blob/master/src/ListBuilder.js)' object uses the `xml2js` library, returning an array of the names from the XML it is passed.
 
-At this stage, I was passing my Scraper the ListBuilder's 'listNames' function as a callback, in order to get the latter to run after the HTTP response data had arrived. This didn't feel too clever, and the idea of sequencing a long chain of callback functions began to look increasingly horrific. I had a dull idea that promises were the solution - I had used those emitted by Node's http.get function, but had never written my own. After a lot of reading, video-watching and experimenting, I hit on a solution that would run both API queries in parallel and (using Promise.all), after *both* have succeeded, run a series of functions with the resulting data. Perfect, et voila, my list appeared!
+At this stage, I was passing my Scraper the ListBuilder's 'listNames' function as a callback, in order to get the latter to run after the HTTP response data had arrived. This didn't feel too clever, and the idea of sequencing a long chain of callback functions began to look increasingly horrific. I had a dull idea that promises were the solution - I had used those emitted by Node's http.get function, but had never written my own. After a lot of reading, video-watching and experimenting, I hit on a solution that would run both API queries in parallel and (using Promise.all), and, after *both* had succeeded, run a series of functions with the resulting data. Perfect, et voila, my list appeared!
 
 Known issues
 -------------
