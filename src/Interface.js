@@ -15,7 +15,7 @@ Interface.prototype.getNames = function(country1, country2) {
         
         this.nameStore.setNames1(this.listBuilder.listNames(namesArray[0]));
         this.nameStore.setNames2(this.listBuilder.listNames(namesArray[1]));
-        this.nameStore.setMatchingNames(this.comparer.compare(this.nameStore.names1, this.nameStore.names2));
+        this.nameStore.setMatchingNames(this.comparer.compare(this.nameStore.getNames1(), this.nameStore.getNames2()));
         this.nameStore.printMatchingNames
     });
 };
