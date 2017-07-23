@@ -10,7 +10,7 @@ function Interface() {
     this.nameStore = new NameStore()
 }
 
-Interface.prototype.getNames = function(country1, country2, testFunction) {
+Interface.prototype.getNames = function(country1, country2) {
     Promise.all([this.scraper.scrape(country1), this.scraper.scrape(country2)]).then(namesArray => {
         
         this.nameStore.setNames1(this.listBuilder.listNames(namesArray[0]));

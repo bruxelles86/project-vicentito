@@ -7,7 +7,7 @@ describe('Scraper', function() {
          expect(source.includes('Adrien')).toBe(true)
          done();
       });
-   }, 240000);
+   }, 20000);
    
    it('will get Spanish names instead if passed \'Spain\' as an argument', function(done) {
       var scraper = new Scraper()
@@ -15,5 +15,5 @@ describe('Scraper', function() {
          expect(source.includes('Gustavo')).toBe(true)
          done();
       });
-   }, 240000);
+   }, 20000);
 });
