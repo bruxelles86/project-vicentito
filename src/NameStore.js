@@ -20,10 +20,13 @@ NameStore.prototype.getNames2 = function() {
     return this.names2
 }
 
-NameStore.prototype.setMatchingNames = function (names) {
+NameStore.prototype.setMatchingNames = function(names) {
     this.matchingNames = names
 }
 
+NameStore.prototype.getMatchingNames = function() {
+    return this.matchingNames
+}
 
 NameStore.prototype.printMatchingNames = function(country1, country2) {
     console.log("There are " + this.matchingNames.length + ` matching names in ${country1} and ${country2}:`)

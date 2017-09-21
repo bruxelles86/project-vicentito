@@ -13,7 +13,7 @@ Scraper.prototype.scrape = function(country) {
     'path': `/restnames/namesincountry.groovy?country=${country}`,
     'port': 80
   };
-  
+
 
   http.get(options, function(resp) {
     resp.setEncoding('utf8');
@@ -24,7 +24,7 @@ Scraper.prototype.scrape = function(country) {
       resolve(page);
     });
   }).on("error", function(err) {
-    console.log(`Got error: ${err.message}`);
+      reject(err.message);
   });
   });
   return promise
