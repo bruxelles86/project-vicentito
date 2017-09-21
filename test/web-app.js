@@ -17,4 +17,11 @@ describe("Project Vicentito front-end", function() {
       done();
     });
   });
+
+  it("should show a form for entering country names", function(done) {
+    browser.visit(uri, function() {
+      browser.assert.element('[id="country_input"]')
+      done();
+    });
+  })
 });
