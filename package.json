@@ -17,10 +17,7 @@
     "url": "https://github.com/bruxelles86/project-vicentito/issues"
   },
   "homepage": "https://github.com/bruxelles86/project-vicentito#readme",
-  "devDependencies": {
-    "jasmine": "^2.6.0",
-    "xml2js": "^0.4.17"
-  },
+  "devDependencies": {},
   "dependencies": {
     "body-parser": "^1.18.1",
     "chai": "^4.1.2",
@@ -28,9 +25,11 @@
     "express": "^4.15.4",
     "html-entities": "^1.2.1",
     "install": "^0.10.1",
+    "jasmine": "^2.8.0",
     "mocha": "^3.5.3",
     "nodemon": "^1.12.1",
     "npm": "^5.2.0",
+    "xml2js": "^0.4.19",
     "zombie": "^5.0.7"
   }
 }
