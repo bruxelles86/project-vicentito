@@ -24,4 +24,16 @@ describe("Project Vicentito front-end", function() {
       done();
     });
   })
+
+  it("receives a list of matching names following a successful search", function(done) {
+    browser.visit(uri, function() {
+      browser.fill('country1', 'Spain');
+      browser.fill('country2', 'Germany');
+      browser.pressButton('Find matching names!').then(() => {
+        browser.assert.text('p', 'Results:')
+      })
+      .catch(err => console.log(err))
+      done();
+    });
+  }, 20000);
 });

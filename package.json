@@ -21,6 +21,7 @@
     "xml2js": "^0.4.17"
   },
   "dependencies": {
+    "body-parser": "^1.18.1",
     "chai": "^4.1.2",
     "ejs": "^2.5.7",
     "express": "^4.15.4",

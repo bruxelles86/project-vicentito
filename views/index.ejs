@@ -4,3 +4,15 @@
     <title>Project Vicentito</title>
   </head>
 </html>
+<body>
+  <form action="/matches" method="post" accept-charset="utf-8" id="country_input">
+    <input type="text" name="country1" placeholder="Enter first country name...">
+    <input type="text" name="country2" placeholder="Enter second country name...">
+    <input type="submit" value="Find matching names!">
+  </form>
+
+  <% if(typeof names != 'undefined') { %>
+    < names = JSON.parse(names) %>
+    <p>Results:<p>
+  <% } %>
+</body>
