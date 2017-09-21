@@ -15,7 +15,7 @@ Installation, Use & Testing
 * After a few seconds, an alphabetized list of matches should appear below, along with a tally for how many have been found
 * Tests can be run by running `npm test` in the main directory
 
-You can also skip all the above and use a verison of the app deployed to Heroku at https://cryptic-hamlet-10312.herokuapp.com/matches
+You can also skip all the above and use a verison of the app deployed to Heroku at https://cryptic-hamlet-10312.herokuapp.com
 
 Features
 --------
