@@ -28,6 +28,7 @@
     "html-entities": "^1.2.1",
     "install": "^0.10.1",
     "mocha": "^3.5.3",
+    "nodemon": "^1.12.1",
     "npm": "^5.2.0",
     "zombie": "^5.0.7"
   }

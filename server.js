@@ -3,7 +3,6 @@ const app = express();
 const bodyParser = require('body-parser')
 
 const Interface = require('./src/Interface.js')
-var interface = new Interface();
 
 app.set('view engine', 'ejs')
 
@@ -18,6 +17,7 @@ app.get('/', function(req, res) {
 })
 
 app.post('/matches', function(req, res) {
+  var interface = new Interface();
   var country1 = req.body.country1.charAt(0).toUpperCase() + req.body.country1.slice(1)
   var country2 = req.body.country2.charAt(0).toUpperCase() + req.body.country2.slice(1)
   interface.getNames(country1, country2).then(function(matches) {
