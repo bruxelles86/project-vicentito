@@ -15,10 +15,12 @@ Installation, Use & Testing
 * After a few seconds, an alphabetized list of matches should appear below, along with a tally for how many have been found
 * Tests can be run by running `npm test` in the main directory
 
+You can also skip all the above and use a verison of the app deployed to Heroku at https://cryptic-hamlet-10312.herokuapp.com/matches
+
 Features
 --------
 
-* The final version allows a user to compare names from any two countries provided for by the thomas-bayer.com API (around two dozen or so). So not just France and Spain. The full list of supported countries can be found [here](http://www.thomas-bayer.com/restnames/countries.groovy).
+The final version allows a user to compare names from any two countries provided for by the thomas-bayer.com API (around two dozen or so). So not just France and Spain. The full list of supported countries can be found [here](http://www.thomas-bayer.com/restnames/countries.groovy).
 
 Technologies & Principles
 -----------------------
