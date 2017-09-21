@@ -23,7 +23,9 @@ app.post('/matches', function(req, res) {
   interface.getNames(country1, country2).then(function(matches) {
     res.render('index.ejs', { names: JSON.stringify(matches.sort()), country1: country1, country2: country2 })
   })
-  .catch(err => console.log(err))
+  .catch(function(err) {
+    console.log(err)
+  });
 })
 
 module.exports = app;

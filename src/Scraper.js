@@ -10,7 +10,7 @@ Scraper.prototype.scrape = function(country) {
 
   options = {
     'host': 'www.thomas-bayer.com',
-    'path': `/restnames/namesincountry.groovy?country=${country}`,
+    'path': `/restnames/namesincountry.groovy?country=${country.charAt(0).toUpperCase() + country.slice(1)}`,
     'port': 80
   };
 
