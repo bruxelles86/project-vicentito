@@ -4,12 +4,14 @@ const bodyParser = require('body-parser')
 
 const Interface = require('./src/Interface.js')
 
+var port = process.env.PORT || 3000;
+
 app.set('view engine', 'ejs')
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json());
 
-app.listen(3000, function() {  console.log('listening on 3000')
+app.listen(port, function() {  console.log(`listening on port ${port}`)
 })
 
 app.get('/', function(req, res) {
