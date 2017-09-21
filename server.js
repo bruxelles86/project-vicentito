@@ -18,8 +18,10 @@ app.get('/', function(req, res) {
 })
 
 app.post('/matches', function(req, res) {
-  interface.getNames(req.body.country1, req.body.country2).then(function(matches) {
-    res.render('index.ejs', { names: JSON.stringify(matches) })
+  var country1 = req.body.country1
+  var country2 = req.body.country2
+  interface.getNames(country1, country2).then(function(matches) {
+    res.render('index.ejs', { names: JSON.stringify(matches.sort()), country1: country1, country2: country2 })
   })
   .catch(err => console.log(err))
 })

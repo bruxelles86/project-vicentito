@@ -14,7 +14,7 @@
   <% if(typeof names != 'undefined') { %>
     <% names = JSON.parse(names) %>
     <p>Results:<p>
-    <p>There are <%= names.length %> names with identical spelling in the languages selected:<p>
+    <p>There are <%= names.length %> names with identical spelling in <%= country1 %> and <%= country2 %>:<p>
       <ul>
     <% names.forEach(function(name) { %>
         <li><%=name%></li>
