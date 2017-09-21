@@ -25,8 +25,11 @@ NameStore.prototype.setMatchingNames = function (names) {
 }
 
 
-NameStore.prototype.printMatchingNames = function() {
-    console.log(this.matchingNames)
+NameStore.prototype.printMatchingNames = function(country1, country2) {
+    console.log("There are " + this.matchingNames.length + ` matching names in ${country1} and ${country2}:`)
+    this.matchingNames.forEach(function(name) {
+      console.log(name)
+    })
 }
 
 module.exports = NameStore;

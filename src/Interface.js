@@ -12,11 +12,10 @@ function Interface() {
 
 Interface.prototype.getNames = function(country1, country2) {
     Promise.all([this.scraper.scrape(country1), this.scraper.scrape(country2)]).then(namesArray => {
-        
         this.nameStore.setNames1(this.listBuilder.listNames(namesArray[0]));
         this.nameStore.setNames2(this.listBuilder.listNames(namesArray[1]));
         this.nameStore.setMatchingNames(this.comparer.compare(this.nameStore.getNames1(), this.nameStore.getNames2()));
-        this.nameStore.printMatchingNames
+        this.nameStore.printMatchingNames(country1, country2)
     });
 };
 
