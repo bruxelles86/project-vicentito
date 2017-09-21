@@ -4,6 +4,7 @@
   "description": "A project to scrape baby name websites to find names that are identical in Spanish and French",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "jasmine && mocha"
   },
   "repository": {
