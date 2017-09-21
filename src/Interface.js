@@ -17,7 +17,6 @@ Interface.prototype.getNames = function(country1, country2) {
         _this.nameStore.setNames1(_this.listBuilder.listNames(namesArray[0]));
         _this.nameStore.setNames2(_this.listBuilder.listNames(namesArray[1]));
         _this.nameStore.setMatchingNames(_this.comparer.compare(_this.nameStore.getNames1(), _this.nameStore.getNames2()));
-        _this.nameStore.printMatchingNames(country1, country2)
         resolve(_this.nameStore.getMatchingNames())
     })
     .catch((err) => reject(err))
