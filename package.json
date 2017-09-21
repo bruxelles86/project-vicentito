@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "chai": "^4.1.2",
+    "ejs": "^2.5.7",
     "express": "^4.15.4",
     "install": "^0.10.1",
     "mocha": "^3.5.3",
