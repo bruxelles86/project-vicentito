@@ -12,7 +12,13 @@
   </form>
 
   <% if(typeof names != 'undefined') { %>
-    < names = JSON.parse(names) %>
+    <% names = JSON.parse(names) %>
     <p>Results:<p>
+    <p>There are <%= names.length %> names with identical spelling in the languages selected:<p>
+      <ul>
+    <% names.forEach(function(name) { %>
+        <li><%=name%></li>
+    <% }) %>
+    </ul>
   <% } %>
 </body>
