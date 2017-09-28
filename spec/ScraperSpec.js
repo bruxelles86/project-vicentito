@@ -6,7 +6,8 @@ describe('Scraper', function() {
       scraper.scrape('France').then(function(source) {
          expect(source.includes('Adrien')).toBe(true)
          done();
-      });
+      })
+      .catch(err => console.log(err))
    }, 20000);
    
    it('will get Spanish names instead if passed \'Spain\' as an argument', function(done) {
@@ -14,7 +15,8 @@ describe('Scraper', function() {
       scraper.scrape('Spain').then(function(source) {
          expect(source.includes('Gustavo')).toBe(true)
          done();
-      });
+      })
+      .catch(err => console.log(err))
    }, 20000);
    
    it('will get British names', function(done) {
@@ -22,6 +24,7 @@ describe('Scraper', function() {
       scraper.scrape('Great Britain').then(function(source) {
          expect(source.includes('James')).toBe(true)
          done();
-      });
+      })
+      .catch(err => console.log(err))
    }, 20000);
 });
