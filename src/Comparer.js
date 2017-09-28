@@ -3,13 +3,9 @@ function Comparer() {
 };
 
 Comparer.prototype.compare = function(namesList1, namesList2) {
-    var matchingNames = this.matchingNames
-    namesList1.forEach(function(name) {
-       if(namesList2.includes(name)) {
-            matchingNames.push(name)
-       } 
-    });
-    return matchingNames
+    return namesList1.filter(function(name) {
+        return namesList2.includes(name)
+    })
 };
 
 module.exports = Comparer;

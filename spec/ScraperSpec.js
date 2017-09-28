@@ -16,4 +16,12 @@ describe('Scraper', function() {
          done();
       });
    }, 20000);
+   
+   it('will get British names', function(done) {
+      var scraper = new Scraper()
+      scraper.scrape('Great Britain').then(function(source) {
+         expect(source.includes('James')).toBe(true)
+         done();
+      });
+   }, 20000);
 });
